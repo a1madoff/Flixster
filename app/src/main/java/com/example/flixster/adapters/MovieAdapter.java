@@ -76,15 +76,17 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
             // If the phone is in landscape mode
             if (context.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
                 imageUrl = movie.getBackdropPath();
+                Glide.with(context)
+                        .load(imageUrl)
+                        .placeholder(R.drawable.flicks_landscape_placeholder)
+                        .into(ivPoster);
             } else { // If the phone is in portrait mode
                 imageUrl = movie.getPosterPath();
+                Glide.with(context)
+                        .load(imageUrl)
+                        .placeholder(R.drawable.flicks_portrait_placeholder)
+                        .into(ivPoster);
             }
-
-
-            Glide.with(context)
-                    .load(imageUrl)
-                    .placeholder(R.drawable.placeholder)
-                    .into(ivPoster);
         }
     }
 }
