@@ -2,7 +2,9 @@ package com.example.flixster;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 
 import com.google.android.youtube.player.YouTubeBaseActivity;
@@ -15,6 +17,7 @@ public class MovieTrailerActivity extends YouTubeBaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
         setContentView(R.layout.activity_movie_trailer);
 
         final String youtubeKey = getIntent().getStringExtra("youtubeKey");
@@ -27,7 +30,9 @@ public class MovieTrailerActivity extends YouTubeBaseActivity {
             @Override
             public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
                 // Cues the video
-                youTubePlayer.cueVideo(youtubeKey);
+                youTubePlayer.setFullscreen(true);
+                youTubePlayer.loadVideo(youtubeKey);
+                youTubePlayer.play();
             }
 
             @Override

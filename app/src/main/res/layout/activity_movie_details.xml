@@ -25,19 +25,6 @@
         android:textSize="18sp"
         android:textStyle="italic" />
 
-    <RatingBar
-        android:id="@+id/rbVoteAverage"
-        style="@style/Widget.AppCompat.RatingBar.Small"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/thumbnail"
-        android:layout_marginTop="2dp"
-        android:layout_marginStart="10dp"
-        android:numStars="5"
-        android:stepSize="0.5" />
-
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
@@ -73,5 +60,39 @@
         android:layout_marginTop="155dp"
         android:background="@android:color/transparent"
         app:srcCompat="@android:drawable/ic_media_play" />
+
+    <RatingBar
+        android:id="@+id/rbVoteAverage"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/thumbnail"
+        android:layout_marginTop="2dp"
+        android:layout_marginStart="10dp"
+        android:numStars="5"
+        android:stepSize="0.5" />
+
+    <ProgressBar
+        android:id="@+id/popularity"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/thumbnail"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="15dp"
+        android:progress="50"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/thumbnail"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-1dp"
+        android:layout_marginEnd="70dp"
+        android:text="Popularity"
+        android:textSize="14sp" />
 
 </RelativeLayout>

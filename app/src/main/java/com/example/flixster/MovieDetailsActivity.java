@@ -5,11 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
@@ -37,6 +39,7 @@ public class MovieDetailsActivity extends AppCompatActivity {
     RatingBar rbVoteAverage;
     ImageView thumbnail;
     ImageButton playButton;
+    ProgressBar popularity;
 
     Context context;
 
@@ -51,6 +54,7 @@ public class MovieDetailsActivity extends AppCompatActivity {
         rbVoteAverage = (RatingBar) findViewById(R.id.rbVoteAverage);
         thumbnail = (ImageView) findViewById(R.id.thumbnail);
         playButton = (ImageButton) findViewById(R.id.playButton);
+        popularity = (ProgressBar) findViewById(R.id.popularity);
         context = this;
 
         // Unwraps the movie passed in via intent, using its simple name as the key
@@ -109,6 +113,10 @@ public class MovieDetailsActivity extends AppCompatActivity {
         // Vote average is 0-10, converts to 0-5
         float voteAverage = movie.getVoteAverage().floatValue();
         rbVoteAverage.setRating(voteAverage = voteAverage > 0 ? voteAverage / 2.0f : voteAverage);
+
+        int popularityScore = movie.getPopularity().intValue();
+        popularity.setProgress(popularityScore);
+
 
         String imageUrl = movie.getBackdropPath();
         Log.d(TAG, imageUrl);
