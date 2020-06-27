@@ -22,6 +22,8 @@ import org.parceler.Parcels;
 
 import java.util.List;
 
+import jp.wasabeef.glide.transformations.RoundedCornersTransformation;
+
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> {
 
     Context context;
@@ -103,12 +105,14 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
                 imageUrl = movie.getBackdropPath();
                 Glide.with(context)
                         .load(imageUrl)
+                        .transform(new RoundedCornersTransformation(30, 10))
                         .placeholder(R.drawable.flicks_landscape_placeholder)
                         .into(ivPoster);
             } else { // If the phone is in portrait mode
                 imageUrl = movie.getPosterPath();
                 Glide.with(context)
                         .load(imageUrl)
+                        .transform(new RoundedCornersTransformation(30, 10))
                         .placeholder(R.drawable.flicks_portrait_placeholder)
                         .into(ivPoster);
             }
