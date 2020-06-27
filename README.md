@@ -39,11 +39,9 @@ Here's a walkthrough of implemented user stories:
 
 <img src='landscape.gif' title='Video Walkthrough Landscape Mode' width='' alt='Video Walkthrough' />
 
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
+GIFs created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
-
-Describe any challenges encountered while building the app.
 
 ## Open-source libraries used
 
