@@ -87,9 +87,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/thumbnail"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="-3dp"
         android:layout_marginStart="270dp"
+        android:layout_marginTop="-3dp"
         android:text="Popularity"
+        android:textColor="@color/colorAccent"
         android:textSize="14sp" />
 
 </RelativeLayout>

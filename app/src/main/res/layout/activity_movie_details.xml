@@ -82,6 +82,7 @@
         android:layout_below="@+id/thumbnail"
         android:layout_marginTop="2dp"
         android:layout_marginEnd="15dp"
+        android:progressBackgroundTint="#FFFFFF"
         android:progress="50"/>
 
     <TextView
@@ -93,6 +94,7 @@
         android:layout_marginTop="-1dp"
         android:layout_marginEnd="70dp"
         android:text="Popularity"
+        android:textColor="@color/colorAccent"
         android:textSize="14sp" />
 
 </RelativeLayout>
