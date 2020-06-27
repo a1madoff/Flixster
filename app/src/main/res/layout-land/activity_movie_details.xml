@@ -79,6 +79,7 @@
         android:layout_below="@+id/thumbnail"
         android:layout_marginTop="0dp"
         android:layout_marginStart="340dp"
+        android:progressBackgroundTint="#FFFFFF"
         android:progress="50"/>
 
     <TextView
